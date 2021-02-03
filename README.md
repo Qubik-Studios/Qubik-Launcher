@@ -2,7 +2,7 @@
 
 <h1 align="center">Qubik Launcher</h1>
 
-<em><h5 align="center">Our fork from the HeliosLauncher</h5></em>
+<em><h5 align="center">Our fork from the [HeliosLauncher][mainrepo]</h5></em>
 
 
 <p align="center">Play the Qubik Client the Right way with the use of our Own Client!</p>
@@ -42,10 +42,26 @@ If you download from the [Releases](https://github.com/Qubik-Studios/Qubik-Launc
 
 | Platform | File | Ready? | 
 | -------- | ---- | ------ |
-| Windows x64 | `Helios-Launcher-setup-VERSION.exe` | Yes ✔
-| macOS | `Helios-Launcher-setup-VERSION.dmg` | No ❌
-| Linux x64 | `Helios-Launcher-setup-VERSION.AppImage` | No ❌
-| Current Phase | Team Alpha Phase |
+| Windows x64 | `Qubik-Launcher-setup-VERSION.exe` | Yes ✔
+| macOS | `Qubik-Launcher-setup-VERSION.dmg` | No ❌
+| Linux x64 | `Qubik-Launcher-setup-VERSION.AppImage` | No ❌
+
+**State of Testing**
+
+See the current Progress of the Launcher test phases.
+
+| Phase | Progress | Finish | 
+| -------- | ---- | ------ |
+| -Alpha- | ---- | ------ |
+| Team Alpha | 10% | No ❌ |
+| Closed Alpha | 0% | No ❌ |
+| Open Alpha | 0% | No ❌ |
+| -Beta- | ---- | ------ |
+| Team Beta | 0% | No ❌ |
+| Closed Beta | 0% | No ❌ |
+| Open Beta | 0% | No ❌ |
+
+
 
 ## Console
 
@@ -101,6 +117,8 @@ Join our Bug Report Discord!
 ### See you ingame.
 
 
+# A Project maintained by Qubik Studios
+
 [nodejs]: https://nodejs.org/en/ 'Node.js'
 [vscode]: https://code.visualstudio.com/ 'Visual Studio Code'
 [mainprocess]: https://electronjs.org/docs/tutorial/application-architecture#main-and-renderer-processes 'Main Process'
@@ -110,3 +128,4 @@ Join our Bug Report Discord!
 [bugTracker]: http://discord.Qubik-Studios.net 'Bugtracker Discord'
 [docs]: https://qubik-studios.net/index.php/docs-category/qubik-client/ 'Docs'
 [nebula]: https://github.com/dscalzi/Nebula 'dscalzi/Nebula'
+[mainrepo]: https://github.com/dscalzi/HeliosLauncher 'Original Source'
