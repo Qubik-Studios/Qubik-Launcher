@@ -3498,6 +3498,7 @@ input:checked + .toggleSwitchSlider:before {
     cursor: pointer;
     position: relative;
     background: rgba(131, 131, 131, 0.25);
+    border-radius: 10px;
 }
 .serverListing[selected] {
     cursor: default;
@@ -3557,10 +3558,12 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Server listing image. */
 .serverListingImg {
+    background-color: #e0e0e040;
     margin: 0px 10px 0px 5px;
-    border: 1px solid #fff;
+    border: 0.5px solid #fff;
     height: 50px;
     width: 50px;
+    border-radius: 5px;
 }
 
 /* Content container for the server listing's details. */
