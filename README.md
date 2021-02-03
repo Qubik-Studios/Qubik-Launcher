@@ -50,16 +50,16 @@ If you download from the [Releases](https://github.com/Qubik-Studios/Qubik-Launc
 
 See the current Progress of the Launcher test phases.
 
-| Phase | Progress | Finish | 
-| -------- | ---- | ------ |
-| -Alpha- | ---- | ------ |
-| Team Alpha | 10% | No ❌ |
-| Closed Alpha | 0% | No ❌ |
-| Open Alpha | 0% | No ❌ |
-| -Beta- | ---- | ------ |
-| Team Beta | 0% | No ❌ |
-| Closed Beta | 0% | No ❌ |
-| Open Beta | 0% | No ❌ |
+| Phase | Progress | Finish | Active |
+| -------- | ---- | ------ | ------ |
+| -Alpha- | ---- | ------ | ------ |
+| Team Alpha | 10% | No ❌ | Yes ✔
+| Closed Alpha | 0% | No ❌ | No ❌ |
+| Open Alpha | 0% | No ❌ | No ❌ |
+| -Beta- | ---- | ------ | ------ |
+| Team Beta | 0% | No ❌ | No ❌ |
+| Closed Beta | 0% | No ❌ | No ❌ |
+| Open Beta | 0% | No ❌ | No ❌ |
 
 
 
