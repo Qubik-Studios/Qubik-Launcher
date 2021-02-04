@@ -54,7 +54,7 @@ See the current Progress of the Launcher test phases.
 | -------- | ---- | ------ | ------ |
 | -Alpha- | ---- | ------ | ------ |
 | Team Alpha | 100% | Yes ✔ | Yes ✔
-| Closed Alpha | 0% | No ❌ | No ❌ |
+| Closed Alpha | 0% | No ❌ | Yes ✔ |
 | Open Alpha | 0% | No ❌ | No ❌ |
 | -Beta- | ---- | ------ | ------ |
 | Team Beta | 0% | No ❌ | No ❌ |
