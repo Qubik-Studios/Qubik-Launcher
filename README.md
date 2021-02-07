@@ -3,6 +3,7 @@
 <h1 align="center">Qubik Launcher</h1>
 
 <em><h5 align="center">Our fork from the [HeliosLauncher][mainrepo]</h5></em>
+<h5 align="center"><img src="https://travis-ci.com/Qubik-Studios/Qubik-Launcher.svg?token=ZzwoacJetFVH55szQXjx&branch=master"></h5>
 
 
 <p align="center">Play the Qubik Client the Right way with the use of our Own Client!</p>
