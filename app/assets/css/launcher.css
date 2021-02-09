@@ -2513,6 +2513,7 @@ input:checked + .toggleSwitchSlider:before {
 #newsArticleContentScrollable img,
 #newsArticleContentScrollable iframe {
     max-width: 95%;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
