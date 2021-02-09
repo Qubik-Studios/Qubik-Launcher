@@ -1,8 +1,9 @@
-<p align="center"><img src="./app/assets/images/SealCircle.png" width="150px" height="150px" alt="aventium softworks"></p>
+<p align="center"><img src="./app/assets/images/SealCircle.png" width="150px" height="150px" alt="Qubik Client"></p>
 
 <h1 align="center">Qubik Launcher</h1>
 
 <em><h5 align="center">Our fork from the [HeliosLauncher][mainrepo]</h5></em>
+<h5 align="center"><img src="https://travis-ci.com/Qubik-Studios/Qubik-Launcher.svg?token=ZzwoacJetFVH55szQXjx&branch=master"></h5>
 
 
 <p align="center">Play the Qubik Client the Right way with the use of our Own Client!</p>
@@ -53,8 +54,8 @@ See the current Progress of the Launcher test phases.
 | Phase | Progress | Finish | Active |
 | -------- | ---- | ------ | ------ |
 | -Alpha- | ---- | ------ | ------ |
-| Team Alpha | 10% | No ❌ | Yes ✔
-| Closed Alpha | 0% | No ❌ | No ❌ |
+| Team Alpha | 100% | Yes ✔ | Yes ✔
+| Closed Alpha | 0% | No ❌ | Yes ✔ |
 | Open Alpha | 0% | No ❌ | No ❌ |
 | -Beta- | ---- | ------ | ------ |
 | Team Beta | 0% | No ❌ | No ❌ |
