@@ -1215,11 +1215,11 @@ function isPrerelease(version) {
 function populateVersionInformation(version, valueElement, titleElement, checkElement) {
     valueElement.innerHTML = version
     if(isPrerelease(version)){
-        titleElement.innerHTML = 'プレリリース'
+        titleElement.innerHTML = 'Unstable Build'
         titleElement.style.color = '#ff886d'
         checkElement.style.background = '#ff886d'
     } else {
-        titleElement.innerHTML = '安定版リリース'
+        titleElement.innerHTML = 'Stable Build'
         titleElement.style.color = null
         checkElement.style.background = null
     }

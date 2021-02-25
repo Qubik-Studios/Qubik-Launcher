@@ -113,7 +113,13 @@ body, button {
     font-family: 'Avenir Medium';
     letter-spacing: 0.5px;
 }
-
+#frameTitleSubText {
+    font-size: 10px;
+    font-family: 'Avenir Medium';
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    color: #c0c0c0;
+}
 /* Windows frame button dock. */
 #frameButtonDockWin {
     -webkit-app-region: no-drag !important;
@@ -483,7 +489,7 @@ body, button {
 #loginImageSeal {
     border-radius: 10px;
     border: 0px solid #cad7e1;
-    height: 125px;
+    height: 100px;
     width: auto;
     margin-bottom: 20px;
 }
@@ -491,7 +497,7 @@ body, button {
 /* Header on login view. */
 #loginSubheader {
     font-family: 'Avenir Medium';
-    margin-bottom: 25px;
+    margin-bottom: 2px;
     font-size: 12px;
     letter-spacing: 1px;
     font-weight: bold;
@@ -511,6 +517,8 @@ body, button {
     fill: #fff;
     height: 20px;
     width: 20px;
+    padding-left: 10px;
+    align-self: start;
 }
 
 /* Span which displays errors related to login field content. */
@@ -610,7 +618,7 @@ body, button {
     letter-spacing: 2px;
     border: none;
     padding: 15px 5px;
-    margin: 10px 0px;
+    margin: 1px 0px;
     cursor: pointer;
     position: relative;
     right: -20px;
@@ -861,19 +869,21 @@ body, button {
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
-
 #loginMSButton {
-    background: none;
-    border: none;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-size: 20px;
+    font-family: 'Segoe UI Regular';
+    color: #FFFFFF;
+    background: #2F2F2F;
+    border: 1px;
+    border-color: #8C8C8C;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    cursor: pointer;
 }
 #loginMSButton:disabled {
     color: rgba(255, 255, 255, 0.75);
     pointer-events: none;
 }
-
 #loginMSButton:hover,
 #loginMSButton:focus {
     text-shadow: 0px 0px 20px #fff;
@@ -2953,12 +2963,12 @@ input:checked + .toggleSwitchSlider:before {
 /* Settings icon colors. */
 #settingsSVG {
     stroke: #ffffff;
-    height: 15px;
+    height: 20px;
 }
 .mediaButton:hover #settingsSVG,
 .mediaButton:focus #settingsSVG,
 .mediaButton:active #settingsSVG {
-    height: 23px;
+    height: 28px;
 }
 
 /* Settings tooltip styles. */
@@ -3004,6 +3014,14 @@ input:checked + .toggleSwitchSlider:before {
     fill: #1b8dd4;
 }
 
+#sponsorSVG:hover,
+#sponsorURL:focus #sponsorSVG {
+    fill: #F18B4D;
+}
+#sponsorSVG:active {
+    fill: #F18B4D;
+}
+
 /* Instagram icon colors. */
 #instagramSVG:hover,
 #instagramURL:focus #instagramSVG {
@@ -3031,6 +3049,7 @@ input:checked + .toggleSwitchSlider:before {
 #discordSVG:active {
     fill: #657ac4;
 }
+/* Report icon colors. */
 #reportSVG:hover,
 #reportURL:focus #reportSVG {
     fill: white;
