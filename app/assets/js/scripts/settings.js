@@ -403,18 +403,22 @@ function processLogOut(val, isLastAccount, skip = false) {
             ipcRenderer.send('openMSALogoutWindow', 'open')
         }
     }
-    const prevSelAcc = ConfigManager.getSelectedAccount()
-    AuthManager.removeAccount(uuid).then(() => {
-        if (!isLastAccount && uuid === prevSelAcc.uuid) {
-            const selAcc = ConfigManager.getSelectedAccount()
-            refreshAuthAccountSelected(selAcc.uuid)
-            updateSelectedAccount(selAcc)
-            validateSelectedAccount()
-        }
-    })
-    $(parent).fadeOut(250, () => {
-        parent.remove()
-    })
+    function processLogOut(val, isLastAccount){
+        const parent = val.closest('.settingsAuthAccount')
+        const uuid = parent.getAttribute('uuid')
+        const prevSelAcc = ConfigManager.getSelectedAccount()
+        AuthManager.removeAccount(uuid).then(() => {
+            if(!isLastAccount && uuid === prevSelAcc.uuid){
+                const selAcc = ConfigManager.getSelectedAccount()
+                refreshAuthAccountSelected(selAcc.uuid)
+                updateSelectedAccount(selAcc)
+                validateSelectedAccount()
+            }
+        })
+        $(parent).fadeOut(250, () => {
+            parent.remove()
+        })
+    }
 }
 
 ipcRenderer.on('MSALogoutWindowReply', (event, ...args) => {
@@ -462,7 +466,7 @@ function populateAuthAccounts() {
         const acc = authAccounts[val]
         authAccountStr += `<div class="settingsAuthAccount" uuid="${acc.uuid}">
             <div class="settingsAuthAccountLeft">
-                <img class="settingsAuthAccountImage" alt="${acc.displayName}" src="https://crafatar.com/renders/body/${acc.uuid}?scale=3&default=MHF_Steve&overlay">
+                <img class="settingsAuthAccountImage" alt="${acc.displayName}" src="https://mc-heads.net/body/${acc.uuid}">
             </div>
             <div class="settingsAuthAccountRight">
                 <div class="settingsAuthAccountDetails">

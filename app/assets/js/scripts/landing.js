@@ -130,7 +130,7 @@ function updateSelectedAccount(authUser){
             username = authUser.displayName
         }
         if(authUser.uuid != null){
-            document.getElementById('avatarContainer').style.backgroundImage = `url('https://crafatar.com/avatars/${authUser.uuid}?&overlay')`
+            document.getElementById('avatarContainer').style.backgroundImage = `url('https://mc-heads.net/avatar/${authUser.uuid}')`
         }
     }
     user_text.innerHTML = username

@@ -64,7 +64,7 @@ body, button {
     display: flex;
     flex-direction: column;
     transition: background-color 1s ease;
-    /*background-color: rgba(0, 0, 0, 0.5);*/
+    /*background-color: rgba(0, 0, 0, 1);*/
     -webkit-user-select: none;
 }
 
@@ -1101,13 +1101,16 @@ body, button {
 /* Default styles for text/number inputs. */
 #settingsContainer input[type=number],
 #settingsContainer input[type=text] {
+    outline: none;
     color: white;
     background: rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
+    border-radius: 15px;
     border: 1px solid rgba(126, 126, 126, 0.57);
     font-family: 'Avenir Book';
     transition: 0.25s ease;
+    text-align: center;
 }
+
 #settingsContainer input[type=number]:focus,
 #settingsContainer input[type=text]:focus {
     outline: none;
