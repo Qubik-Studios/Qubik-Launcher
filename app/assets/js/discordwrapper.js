@@ -1,48 +1,22 @@
-// Work in progress
-const logger = require('./loggerutil')('%c[DiscordWrapper]', 'color: #7289da; font-weight: bold')
+const RPC = require("discord-rpc");
+const rpc = new RPC.Client({
+    transport: "ipc"
+});
 
-const {Client} = require('discord-rpc')
+rpc.on("ready", () => {
+    rpc.setActivity({
+        details: "Testing",
+        state: "RPC test",
+        startTimestamp: new Date(),
+        largeImageKey: "qubik_client_logo",
+        largeImageText: "Testing new RPC system",
+        smallImageKey: "beta",
+        smallImageText: "PreBeta 1"
+    });
 
-let client
-let activity
+    console.log("Rich presence ready!")
+});
 
-exports.initRPC = function(genSettings, servSettings, initialDetails = 'Waiting for Client..'){
-    client = new Client({ transport: 'ipc' })
-
-    activity = {
-        details: initialDetails,
-        state: 'Server: ' + servSettings.shortId,
-        largeImageKey: servSettings.largeImageKey,
-        largeImageText: servSettings.largeImageText,
-        smallImageKey: genSettings.smallImageKey,
-        smallImageText: genSettings.smallImageText,
-        startTimestamp: new Date().getTime(),
-        instance: false
-    }
-
-    client.on('ready', () => {
-        logger.log('Discord RPC Connected')
-        client.setActivity(activity)
-    })
-    
-    client.login({clientId: genSettings.clientId}).catch(error => {
-        if(error.message.includes('ENOENT')) {
-            logger.log('Unable to initialize Discord Rich Presence, no client detected.')
-        } else {
-            logger.log('Unable to initialize Discord Rich Presence: ' + error.message, error)
-        }
-    })
-}
-
-exports.updateDetails = function(details){
-    activity.details = details
-    client.setActivity(activity)
-}
-
-exports.shutdownRPC = function(){
-    if(!client) return
-    client.clearActivity()
-    client.destroy()
-    client = null
-    activity = null
-}
+rpc.login({
+    clientId: "806600071088308224"
+});
