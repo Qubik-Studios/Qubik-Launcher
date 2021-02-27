@@ -1,22 +1,27 @@
-const RPC = require("discord-rpc");
+const window = require('electron').remote.getCurrentWindow().title
+const logger = require('./loggerutil')('%c[DiscordWrapper]', 'color: #7289da; font-weight: bold')
+
+const RPC = require('discord-rpc')
 const rpc = new RPC.Client({
-    transport: "ipc"
-});
+    transport: 'ipc'
+})
 
-rpc.on("ready", () => {
+logger.log('RPC Started')
+
+rpc.on('ready', () => {
     rpc.setActivity({
-        details: "Testing",
-        state: "RPC test",
+        details: 'Developing the shit out of here...',
+        state: 'Sitting in: ' + window,
         startTimestamp: new Date(),
-        largeImageKey: "qubik_client_logo",
-        largeImageText: "Testing new RPC system",
-        smallImageKey: "beta",
-        smallImageText: "PreBeta 1"
-    });
+        largeImageKey: 'qubik_client_logo',
+        largeImageText: 'Testing new RPC system',
+        smallImageKey: 'beta',
+        smallImageText: 'PreBeta 1'
+    })
 
-    console.log("Rich presence ready!")
-});
+    logger.log('Rich presence ready or Reloaded!')
+})
 
 rpc.login({
-    clientId: "806600071088308224"
-});
+    clientId: '806600071088308224'
+})

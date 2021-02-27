@@ -212,3 +212,11 @@ document.addEventListener('keydown', function (e) {
         window.toggleDevTools()
     }
 })
+document.addEventListener('keydown', function (e) {
+    if((e.key === 'R' || e.key === 'r') && e.ctrlKey && e.shiftKey && e.altKey){
+        loggerUICore.log('Reload started.. Please wait..')
+        let window = remote.getCurrentWindow()
+        window.reload()
+        loggerUICore.log('Reload complete!')
+    }
+})
