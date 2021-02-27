@@ -10,11 +10,11 @@ logger.log('RPC Started')
 
 rpc.on('ready', () => {
     rpc.setActivity({
-        details: 'Developing the shit out of here...',
+        details: 'Qubik-Studios.net',
         state: 'Sitting in: ' + window,
         startTimestamp: new Date(),
         largeImageKey: 'qubik_client_logo',
-        largeImageText: 'Testing new RPC system',
+        largeImageText: 'Qubik Launcher',
         smallImageKey: 'beta',
         smallImageText: 'PreBeta 1'
     })
