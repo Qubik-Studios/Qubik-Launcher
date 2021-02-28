@@ -11,7 +11,7 @@ logger.log('RPC Started')
 rpc.on('ready', () => {
     rpc.setActivity({
         details: 'Qubik-Studios.net',
-        state: 'Sitting in: ' + window,
+        state: 'Sitting in: ' + window + ' Coding',
         startTimestamp: new Date(),
         largeImageKey: 'qubik_client_logo',
         largeImageText: 'Qubik Launcher',

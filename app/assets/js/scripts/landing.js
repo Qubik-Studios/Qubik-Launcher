@@ -468,7 +468,7 @@ function asyncSystemScan(mcVersion, launchAfter = true){
 // Keep reference to Minecraft Process
 let proc
 // Is DiscordRPC enabled
-let hasRPC = false
+let hasRPC = true
 // Joined server regex
 // Change this if your server uses something different.
 const GAME_JOINED_REGEX = /\[.+\]: Sound engine started/
@@ -688,7 +688,7 @@ function dlAsync(login = true){
                     if(SERVER_JOINED_REGEX.test(data)){
                         DiscordWrapper.updateDetails('Exploring the Realm!')
                     } else if(GAME_JOINED_REGEX.test(data)){
-                        DiscordWrapper.updateDetails('Sailing to Westeros!')
+                        DiscordWrapper.updateDetails('Playing on a Server')
                     }
                 }
 
