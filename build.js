@@ -20,7 +20,7 @@ builder.build({
     config: {
         appId: 'qubiklauncher',
         productName: 'Qubik Launcher',
-        artifactName: '${productName}-setup-${version}.${ext}',
+        artifactName: '${productName}-${version}-setup.${ext}',
         copyright: 'Copyright © 2021 Qubik Studios',
         directories: {
             buildResources: 'build',
