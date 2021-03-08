@@ -45,8 +45,9 @@ builder.build({
             installerSidebar: 'build/buildinstallerSidebar.bmp',
             uninstallerSidebar: 'build/buildinstallerSidebar.bmp',
             uninstallDisplayName: 'Uninstall Qubik Launcher',
-            license: 'build/license.txt',
-            createStartMenuShortcut: true
+            license: 'build/EULA.txt',
+            createStartMenuShortcut: true,
+            menuCategory: true
         },
         mac: {
             target: 'dmg',

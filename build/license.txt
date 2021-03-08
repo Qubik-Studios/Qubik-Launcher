@@ -1,9 +1,0 @@
-Qubik launcher - EULA
----------------------
-This is a temponary test in this file!
-
-1. You have to accept the EULA from Minecraft
-2. This launcher dont support Illegal (Cracked) accounts
-3. SOON™
-
-Installer version: ID.0.0.0.0.000000
