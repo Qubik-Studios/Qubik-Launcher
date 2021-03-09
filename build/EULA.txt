@@ -1,6 +1,6 @@
 Qubik launcher - EULA
 ---------------------
-This is a temponary test in this file!
+This is a temponary test in this file and will be Updated to a styled HTML file!
 
 1. You have to accept the EULA from Minecraft
 2. This launcher dont support Illegal (Cracked) accounts
