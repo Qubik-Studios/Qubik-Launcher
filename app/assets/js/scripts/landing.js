@@ -1149,3 +1149,4 @@ function loadNews(){
         })
     })
 }
+toggleOverlay(false, false, 'msOverlay')

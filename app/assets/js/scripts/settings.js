@@ -422,11 +422,6 @@ ipcRenderer.on('MSALogoutWindowReply', (event, ...args) => {
     processLogOut(data.val, data.isLastAccount, true)
 })
 
-ipcRenderer.on('MSALogoutWindowReply', (event, ...args) => {
-    toggleOverlay(false, false, 'msOverlay')
-    processLogOut(data.val, data.isLastAccount, true)
-})
-
 /**
  * Refreshes the status of the selected account on the auth account
  * elements.
