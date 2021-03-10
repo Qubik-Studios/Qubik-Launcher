@@ -300,6 +300,8 @@ loginButton.addEventListener('click', () => {
 
 })
 
+//** Microsoft Login*/
+
 loginMSButton.addEventListener('click', (event) => {
     // Show loading stuff.
     toggleOverlay(true, false, 'msOverlay')
@@ -334,19 +336,19 @@ ipcRenderer.on('MSALoginWindowReply', (event, ...args) => {
         }
         
     }
-    toggleOverlay(false, false, 'msOverlay')
     const queryMap = args[0]
     if (queryMap.has('error')) {
         let error = queryMap.get('error')
         let errorDesc = queryMap.get('error_description')
         if(error === 'access_denied'){
-            error = 'ERRPR'
-            errorDesc = 'To use the Qubik Launcher, you must agree to the required permissions! Otherwise you can\'t use this launcher with Microsoft accounts.<br><br>Despite agreeing to the permissions you don\'t give us the possibility to do anything with your account, because all data will always be sent back to you (the launcher) IMMEDIATELY and WITHOUT WAY.'
+            error = 'ERROR'
+            errorDesc = 'access_denied'
         }        
         setOverlayContent(error, errorDesc, 'OK')
         setOverlayHandler(() => {
             loginMSButton.disabled = false
             toggleOverlay(false)
+            toggleOverlay(false, false, 'msOverlay')
         })
         toggleOverlay(true)
         return
