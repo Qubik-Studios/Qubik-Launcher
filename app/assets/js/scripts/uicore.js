@@ -49,7 +49,7 @@ if(!isDev){
                 loggerAutoUpdaterSuccess.log('New update available', info.version)
                 
                 if(process.platform === 'darwin'){
-                    info.darwindownload = `https://github.com/Qubik-Studios/Qubik-Launcher/releases/download/v${info.version}/Qubik Launcher-setup-${info.version}.dmg`
+                    info.darwindownload = `https://github.com/Qubik-Studios/Qubik-Launcher/releases/download/v${info.version}/Qubik Launcher-${info.version}-setup.dmg`
                     showUpdateUI(info)
                 }
                 

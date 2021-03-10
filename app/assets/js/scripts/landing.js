@@ -130,7 +130,7 @@ function updateSelectedAccount(authUser){
             username = authUser.displayName
         }
         if(authUser.uuid != null){
-            document.getElementById('avatarContainer').style.backgroundImage = `url('https://mc-heads.net/avatar/${authUser.uuid}')`
+            document.getElementById('avatarContainer').style.backgroundImage = `url('https://mc-heads.net/avatar/${authUser.displayName}')`
         }
     }
     user_text.innerHTML = username
@@ -1149,4 +1149,3 @@ function loadNews(){
         })
     })
 }
-toggleOverlay(false, false, 'msOverlay')
