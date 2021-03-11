@@ -110,7 +110,9 @@ ipcMain.on('openMSALoginWindow', (ipcEvent, args) => {
         MSALoginWindow = null
     })
 
-
+    MSALoginWindow.on('close', event => {
+        ipcEvent.reply('MSALoginWindowReply', 'error', 'AuthNotFinished')
+    })
 
     MSALoginWindow.webContents.on('did-navigate', (event, uri, responseCode, statusText) => {
         if (uri.startsWith(redirectUriPrefix)) {
@@ -123,11 +125,8 @@ ipcMain.on('openMSALoginWindow', (ipcEvent, args) => {
             })
 
             ipcEvent.reply('MSALoginWindowReply', queryMap)
-
-            MSALoginWindow.on('close', event => {
-                ipcEvent.reply('MSALoginWindowReply', 'error', 'AuthNotFinished')
-            })
             
+            MSALoginWindow.close()    
             MSALoginWindow = null
         }
     })

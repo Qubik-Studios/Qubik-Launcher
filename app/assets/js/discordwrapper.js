@@ -7,7 +7,7 @@ const rpc = new RPC.Client({
 
 // MOTD System
 
-let arr = ['Made in Germany!', 'YEET!', 'Qubik Client', 'Who has cake?', 'You shouldn\'t see this...', 'NULL', 'Maxthier was here', 'ConmineLP was here', 'You arent here...']
+let arr = ['Made in Germany!', 'YEET!', 'Qubik Client', 'BETA!', 'Who has cake?', 'You shouldn\'t see this...', 'BETA!', 'NULL', 'BETA!', 'Maxthier was here', 'ConmineLP was here', 'You arent here...', 'BETA!']
 const motd = arr[Math.floor(Math.random() * arr.length)]
 logger.log('Current MOTD-List: ' + arr)
 logger.log('Current MOTD: ' + motd)
