@@ -4,6 +4,9 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    tags:
+      - 'v*'
 
 jobs:
   release:
@@ -147,3 +150,4 @@ jobs:
           git clone https://github.com/gorilla-devs/github-actions-discord-webhook.git webhook
           bash webhook/send.sh $JOB_STATUS $WEBHOOK_URL
         shell: bash
+  
