@@ -110,10 +110,7 @@ ipcMain.on('openMSALoginWindow', (ipcEvent, args) => {
         MSALoginWindow = null
     })
 
-    MSALoginWindow.on('close', event => {
-        ipcEvent.reply('MSALoginWindowReply', 'error', 'AuthNotFinished')
 
-    })
 
     MSALoginWindow.webContents.on('did-navigate', (event, uri, responseCode, statusText) => {
         if (uri.startsWith(redirectUriPrefix)) {
@@ -127,12 +124,16 @@ ipcMain.on('openMSALoginWindow', (ipcEvent, args) => {
 
             ipcEvent.reply('MSALoginWindowReply', queryMap)
 
-            MSALoginWindow.close()
+            MSALoginWindow.on('close', event => {
+                ipcEvent.reply('MSALoginWindowReply', 'error', 'AuthNotFinished')
+            })
+            
             MSALoginWindow = null
         }
     })
 
     MSALoginWindow.removeMenu()
+    console.log(clientID)
     MSALoginWindow.loadURL('https://login.microsoftonline.com/consumers/oauth2/v2.0/authorize?prompt=consent&client_id=' + clientID + '&response_type=code&scope=XboxLive.signin%20offline_access&redirect_uri=https://login.microsoftonline.com/common/oauth2/nativeclient')
 })
 

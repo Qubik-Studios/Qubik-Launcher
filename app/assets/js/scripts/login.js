@@ -23,6 +23,7 @@ const loginMSButton         = document.getElementById('loginMSButton')
 let lu = false, lp = false
 
 const loggerLogin = LoggerUtil('%c[Login]', 'color: #000668; font-weight: bold')
+const loggerDebug = LoggerUtil('%c[DEBUG]', 'color: #187298; font-weight: bold')
 
 
 /**
@@ -303,39 +304,50 @@ loginButton.addEventListener('click', () => {
 //** Microsoft Login*/
 
 loginMSButton.addEventListener('click', (event) => {
+    loggerLogin.log('Show Loading screen..')
     // Show loading stuff.
+    loggerDebug.log('TP1')
     toggleOverlay(true, false, 'msOverlay')
     loginMSButton.disabled = true
     ipcRenderer.send('openMSALoginWindow', 'open')
 })
 
 ipcRenderer.on('MSALoginWindowReply', (event, ...args) => {
+    loggerLogin.log('Error catch!')
+    loggerDebug.log('TP2')
+    toggleOverlay(false, 'msOverlay')
     if (args[0] === 'error') {
-        
         loginMSButton.disabled = false
         loginLoading(false)
         switch (args[1]){
             case 'AlreadyOpenException': {
+                loggerLogin.log('Login window already open!')
                 setOverlayContent('ERROR', 'Login window already open!', 'OK')
                 setOverlayHandler(() => {
+                    loggerDebug.log('TP3')
                     toggleOverlay(false)
-                    toggleOverlay(false, false, 'msOverlay')
                 })
+                loggerDebug.log('TP4')
                 toggleOverlay(true)
+                toggleOverlay(false, 'msOverlay')
                 return
             }
             case 'AuthNotFinished': {
+                loggerLogin.log('Login not Finished!')
                 setOverlayContent('ERROR', 'You have to login in order to play with the Qubik Launcher!', 'OK')
                 setOverlayHandler(() => {
+                    loggerDebug.log('TP5')
                     toggleOverlay(false)
-                    toggleOverlay(false, false, 'msOverlay')
                 })
+                loggerDebug.log('TP6')
                 toggleOverlay(true)
+                toggleOverlay(false, 'msOverlay')
                 return
             }
         }
         
     }
+
     const queryMap = args[0]
     if (queryMap.has('error')) {
         let error = queryMap.get('error')
@@ -346,10 +358,12 @@ ipcRenderer.on('MSALoginWindowReply', (event, ...args) => {
         }        
         setOverlayContent(error, errorDesc, 'OK')
         setOverlayHandler(() => {
+            loggerDebug.log('TP8')
             loginMSButton.disabled = false
+            toggleOverlay(false, 'msOverlay')
             toggleOverlay(false)
-            toggleOverlay(false, false, 'msOverlay')
         })
+        toggleOverlay(false, 'msOverlay')
         toggleOverlay(true)
         return
     }
@@ -381,14 +395,17 @@ ipcRenderer.on('MSALoginWindowReply', (event, ...args) => {
                 formDisabled(false)
             })
         }, 1000)
+        loggerLogin.log('Login final!')
     }).catch(error => {
         loginMSButton.disabled = false
         loginLoading(false)
         setOverlayContent('ERROR', error.message ? error.message : 'Cant connect to Microsoft server. Press CTRL + SHIFT + I to get more Informations!', Lang.queryJS('login.tryAgain'))
         setOverlayHandler(() => {
+            loggerDebug.log('TP10')
             formDisabled(false)
             toggleOverlay(false)
         })
+        loggerDebug.log('TP11')
         toggleOverlay(true)
         loggerLogin.error(error)
     })
