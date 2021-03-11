@@ -26,9 +26,9 @@ jobs:
           release_name: Qubik Launcher - ${{ steps.get_version.outputs.version }}
           body: |
             ### ▼Download latest version
-            [Windows](https://github.com/${{ github.repository }}/releases/download/${{ steps.get_version.outputs.version }}/Qubik Launcher-${{ steps.get_version.outputs.version-without-v }}-setup.exe)
-            [Mac OS X](https://github.com/${{ github.repository }}/releases/download/${{ steps.get_version.outputs.version }}/Qubik Launcher-${{ steps.get_version.outputs.version-without-v }}-setup.dmg)
-            [Linux](https://github.com/${{ github.repository }}/releases/download/${{ steps.get_version.outputs.version }}/Qubik Launcher-${{ steps.get_version.outputs.version-without-v }}-setup.AppImage)
+            [Windows](https://github.com/${{ github.repository }}/releases/download/${{ steps.get_version.outputs.version }}/QubikLauncher-${{ steps.get_version.outputs.version-without-v }}-setup.exe)
+            [Mac OS X](https://github.com/${{ github.repository }}/releases/download/${{ steps.get_version.outputs.version }}/QubikLauncher-${{ steps.get_version.outputs.version-without-v }}-setup.dmg)
+            [Linux](https://github.com/${{ github.repository }}/releases/download/${{ steps.get_version.outputs.version }}/QubikLauncher-${{ steps.get_version.outputs.version-without-v }}-setup.AppImage)
           draft: false
           prerelease: false
 
