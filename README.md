@@ -1,4 +1,4 @@
-<p align="center"><img src="./app/assets/images/SealCircle.png" width="150px" height="150px" alt="Qubik Client"></p>
+<p align="center"><img src="./app/assets/images/LogoCircle.png" width="150px" height="150px" alt="Qubik Client"></p>
 
 <h1 align="center">Qubik Launcher</h1>
 
