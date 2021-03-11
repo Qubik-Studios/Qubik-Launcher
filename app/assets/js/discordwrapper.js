@@ -1,48 +1,33 @@
-// Work in progress
 const logger = require('./loggerutil')('%c[DiscordWrapper]', 'color: #7289da; font-weight: bold')
 
-const {Client} = require('discord-rpc')
+const RPC = require('discord-rpc')
+const rpc = new RPC.Client({
+    transport: 'ipc'
+})
 
-let client
-let activity
+// MOTD System
 
-exports.initRPC = function(genSettings, servSettings, initialDetails = 'Waiting for Client..'){
-    client = new Client({ transport: 'ipc' })
+let arr = ['Made in Germany!', 'YEET!', 'Qubik Client', 'BETA!', 'Who has cake?', 'You shouldn\'t see this...', 'BETA!', 'NULL', 'BETA!', 'Maxthier was here', 'ConmineLP was here', 'You arent here...', 'BETA!']
+const motd = arr[Math.floor(Math.random() * arr.length)]
+logger.log('Current MOTD-List: ' + arr)
+logger.log('Current MOTD: ' + motd)
 
-    activity = {
-        details: initialDetails,
-        state: 'Server: ' + servSettings.shortId,
-        largeImageKey: servSettings.largeImageKey,
-        largeImageText: servSettings.largeImageText,
-        smallImageKey: genSettings.smallImageKey,
-        smallImageText: genSettings.smallImageText,
-        startTimestamp: new Date().getTime(),
-        instance: false
-    }
+logger.log('RPC Started')
 
-    client.on('ready', () => {
-        logger.log('Discord RPC Connected')
-        client.setActivity(activity)
+rpc.on('ready', () => {
+    rpc.setActivity({
+        details: 'Qubik-Studios.net',
+        state: motd,
+        startTimestamp: new Date(),
+        largeImageKey: 'qubik_client_logo',
+        largeImageText: 'Qubik Launcher',
+        smallImageKey: 'beta',
+        smallImageText: 'PreBeta 1'
     })
-    
-    client.login({clientId: genSettings.clientId}).catch(error => {
-        if(error.message.includes('ENOENT')) {
-            logger.log('Unable to initialize Discord Rich Presence, no client detected.')
-        } else {
-            logger.log('Unable to initialize Discord Rich Presence: ' + error.message, error)
-        }
-    })
-}
 
-exports.updateDetails = function(details){
-    activity.details = details
-    client.setActivity(activity)
-}
+    logger.log('Rich presence ready!')
+})
 
-exports.shutdownRPC = function(){
-    if(!client) return
-    client.clearActivity()
-    client.destroy()
-    client = null
-    activity = null
-}
+rpc.login({
+    clientId: '806600071088308224'
+})

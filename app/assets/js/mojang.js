@@ -8,6 +8,8 @@
 // Requirements
 const request = require('request')
 const logger  = require('./loggerutil')('%c[Mojang]', 'color: #a02d2a; font-weight: bold')
+//const loggerms  = require('./loggerutil')('%c[Microsoft]', 'color: #004A7F; font-weight: bold')
+const loggerqs  = require('./loggerutil')('%c[QubikStudios]', 'color: #FF00DC; font-weight: bold')
 
 // Constants
 const minecraftAgent = {
@@ -25,7 +27,7 @@ const statuses = [
     {
         service: 'authserver.mojang.com',
         status: 'grey',
-        name: 'Authentication Service',
+        name: 'Mojang Authentication Service',
         essential: true
     },
     {
@@ -44,6 +46,12 @@ const statuses = [
         service: 'minecraft.net',
         status: 'grey',
         name: 'Minecraft.net',
+        essential: false
+    },
+    {
+        service: 'qubik-studios.net',
+        status: 'wip',
+        name: 'Qubik-Studios.net',
         essential: false
     },
     {
@@ -72,6 +80,8 @@ exports.statusToHex = function(status){
             return '#eac918'
         case 'red':
             return '#c32625'
+        case 'wip':
+            return '#7F3300'
         case 'grey':
         default:
             return '#848484'
@@ -88,7 +98,7 @@ exports.statusToHex = function(status){
  */
 exports.status = function(){
     return new Promise((resolve, reject) => {
-        request.get('https://status.mojang.com/check',
+        request.get('https://status.mojang.com/check' ,
             {
                 json: true,
                 timeout: 2500
@@ -96,8 +106,8 @@ exports.status = function(){
             function(error, response, body){
 
                 if(error || response.statusCode !== 200){
-                    logger.warn('Unable to retrieve Mojang status.')
-                    logger.debug('Error while retrieving Mojang statuses:', error)
+                    loggerqs.warn('Unable to retrieve Mojang status.')
+                    loggerqs.debug('Error while retrieving Mojang statuses:', error)
                     //reject(error || response.statusCode)
                     for(let i=0; i<statuses.length; i++){
                         statuses[i].status = 'grey'

@@ -18,9 +18,9 @@ function getCurrentPlatform(){
 builder.build({
     targets: (process.argv[2] != null && Platform[process.argv[2]] != null ? Platform[process.argv[2]] : getCurrentPlatform()).createTarget(),
     config: {
-        appId: 'qubiklauncher',
+        appId: 'qubik-launcher',
         productName: 'Qubik Launcher',
-        artifactName: '${productName}-setup-${version}.${ext}',
+        artifactName: '${productName}-${version}-setup.${ext}',
         copyright: 'Copyright © 2021 Qubik Studios',
         directories: {
             buildResources: 'build',
@@ -38,7 +38,16 @@ builder.build({
             oneClick: false,
             perMachine: false,
             allowElevation: true,
-            allowToChangeInstallationDirectory: true
+            allowToChangeInstallationDirectory: true,
+            installerIcon: 'build/installerIcon.ico',
+            uninstallerIcon: 'build/uninstallerIcon.ico',
+            installerHeader: 'build/installerHeader.bmp',
+            installerSidebar: 'build/buildinstallerSidebar.bmp',
+            uninstallerSidebar: 'build/buildinstallerSidebar.bmp',
+            uninstallDisplayName: 'Uninstall Qubik Launcher',
+            license: 'build/EULA.html',
+            createStartMenuShortcut: true,
+            menuCategory: true
         },
         mac: {
             target: 'dmg',

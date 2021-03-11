@@ -27,6 +27,7 @@ window.eval = global.eval = function () {
 // Display warning when devtools window is opened.
 remote.getCurrentWebContents().on('devtools-opened', () => {
     console.log('%cThe console is dark and full of terrors.', 'color: white; -webkit-text-stroke: 4px #a02d2a; font-size: 60px; font-weight: bold')
+    console.log('%cEaster Egg! Open a ticket on the Qubik Studios discord to get a special rank!', 'color: white; -webkit-text-stroke: 4px #a02d2a; font-size: 30px')
     console.log('%cIf you\'ve been told to paste something here, you\'re being scammed.', 'font-size: 16px')
     console.log('%cUnless you know exactly what you\'re doing, close this window.', 'font-size: 16px')
 })
@@ -48,7 +49,7 @@ if(!isDev){
                 loggerAutoUpdaterSuccess.log('New update available', info.version)
                 
                 if(process.platform === 'darwin'){
-                    info.darwindownload = `https://github.com/Qubik-Studios/Qubik-Launcher/releases/download/v${info.version}/Qubik Launcher-setup-${info.version}.dmg`
+                    info.darwindownload = `https://github.com/Qubik-Studios/Qubik-Launcher/releases/download/v${info.version}/Qubik Launcher-${info.version}-setup.dmg`
                     showUpdateUI(info)
                 }
                 
@@ -209,5 +210,13 @@ document.addEventListener('keydown', function (e) {
     if((e.key === 'I' || e.key === 'i') && e.ctrlKey && e.shiftKey){
         let window = remote.getCurrentWindow()
         window.toggleDevTools()
+    }
+})
+document.addEventListener('keydown', function (e) {
+    if((e.key === 'R' || e.key === 'r') && e.ctrlKey && e.shiftKey && e.altKey){
+        loggerUICore.log('Reload started.. Please wait..')
+        let window = remote.getCurrentWindow()
+        window.reload()
+        loggerUICore.log('Reload complete!')
     }
 })
