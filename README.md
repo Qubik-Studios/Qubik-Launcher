@@ -47,22 +47,6 @@ If you download from the [Releases](https://github.com/Qubik-Studios/Qubik-Launc
 | macOS | `Qubik-Launcher-setup-VERSION.dmg` | No ❌
 | Linux x64 | `Qubik-Launcher-setup-VERSION.AppImage` | No ❌
 
-**State of Testing**
-
-See the current Progress of the Launcher test phases.
-
-| Phase | Progress | Finish | Active |
-| -------- | ---- | ------ | ------ |
-| -Alpha- | ---- | ------ | ------ |
-| Team Alpha | 100% | Yes ✔ | Yes ✔
-| Closed Alpha | 100% | Yes ✔ | Yes ✔ |
-| Open Alpha | 0% | No ❌ | No ❌ |
-| -Beta- | ---- | ------ | ------ |
-| Team Beta | 0% | No ❌ | Yes ✔ |
-| Closed Beta | 0% | No ❌ | No ❌ |
-| Open Beta | 0% | No ❌ | No ❌ |
-
-
 
 ## Console
 
