@@ -6,7 +6,7 @@
 [![Launcher Build](https://github.com/Qubik-Studios/Qubik-Launcher/actions/workflows/node.js.yml/badge.svg?event=status)](https://github.com/Qubik-Studios/Qubik-Launcher/actions/workflows/node.js.yml)
 
 
-<p align="center">Play the Qubik Client the Right way with the use of our Own Client!</p>
+<p align="center">Play the Qubik Client the Right way with the use of our own Launcher!</p>
 
 ![Screenshot 1](https://qubik-studios.net/wp-content/uploads/2021/02/Qubik-Launcher-03.02.2021-14_03_53.png)
 ![Screenshot 2](https://qubik-studios.net/wp-content/uploads/2021/02/Qubik-Launcher-03.02.2021-14_03_59.png)
