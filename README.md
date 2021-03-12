@@ -4,8 +4,8 @@
 
 <em><h5 align="center">Our fork from the [HeliosLauncher][mainrepo]</h5></em>
 
-[<p align="center"><img src="https://img.shields.io/github/v/release/Qubik-Studios/Qubik-Launcher?include_prereleases&style=for-the-badge" alt="Current Release">](https://github.com/Qubik-Studios/Qubik-Launcher/releases) [<img src="https://img.shields.io/discord/759767022916599808?label=Discord&style=for-the-badge" alt="Discord">](http://discord.Qubik-Studios.net) [<img src="https://img.shields.io/github/downloads/Qubik-Studios/Qubik-Launcher/total?style=for-the-badge" alt="Downloads">]()
-[<img src="https://img.shields.io/github/languages/code-size/Qubik-Studios/Qubik-Launcher?style=for-the-badge" alt="Current Release">]() </p>
+[<p align="center"><img src="https://img.shields.io/github/v/release/Qubik-Studios/Qubik-Launcher?include_prereleases&style=for-the-badge" alt="Current Release">](https://github.com/Qubik-Studios/Qubik-Launcher/releases) [<img src="https://img.shields.io/discord/759767022916599808?label=Discord&style=for-the-badge" alt="Discord">](http://discord.Qubik-Studios.net) [<img src="https://img.shields.io/github/downloads/Qubik-Studios/Qubik-Launcher/total?style=for-the-badge" alt="Total Downloads">](#)
+[<img src="https://img.shields.io/github/languages/code-size/Qubik-Studios/Qubik-Launcher?style=for-the-badge" alt="Code size">](#) </p>
 
 
 
