@@ -218,7 +218,7 @@ function createWindow() {
 
             d.responseHeaders['Access-Control-Allow-Origin'] = ['null']
 
-            c({cancel: false, responseHeaders: d.responseHeaders});
+            c({cancel: false, responseHeaders: d.responseHeaders})
         }
     )
 

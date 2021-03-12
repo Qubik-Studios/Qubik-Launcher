@@ -3,7 +3,10 @@
 <h1 align="center">Qubik Launcher</h1>
 
 <em><h5 align="center">Our fork from the [HeliosLauncher][mainrepo]</h5></em>
+
+<p align="center">
 [![Launcher Build](https://github.com/Qubik-Studios/Qubik-Launcher/actions/workflows/node.js.yml/badge.svg?event=status)](https://github.com/Qubik-Studios/Qubik-Launcher/actions/workflows/node.js.yml)
+</p>
 
 
 <p align="center">Play the Qubik Client the Right way with the use of our own Launcher!</p>
