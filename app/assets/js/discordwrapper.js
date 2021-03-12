@@ -22,7 +22,7 @@ rpc.on('ready', () => {
         largeImageKey: 'qubik_client_logo',
         largeImageText: 'Qubik Launcher',
         smallImageKey: 'beta',
-        smallImageText: 'PreBeta 1'
+        smallImageText: 'v0.1.1-Beta.0'
     })
 
     logger.log('Rich presence ready!')

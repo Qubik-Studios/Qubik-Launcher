@@ -19,7 +19,7 @@ builder.build({
     targets: (process.argv[2] != null && Platform[process.argv[2]] != null ? Platform[process.argv[2]] : getCurrentPlatform()).createTarget(),
     config: {
         appId: 'qubik-launcher',
-        productName: 'Qubik Launcher',
+        productName: 'QubikLauncher',
         artifactName: '${productName}-${version}-setup.${ext}',
         copyright: 'Copyright © 2021 Qubik Studios',
         directories: {

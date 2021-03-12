@@ -48,8 +48,8 @@ If you download from the [Releases](https://github.com/Qubik-Studios/Qubik-Launc
 
 | Platform | File | Ready? | 
 | -------- | ---- | ------ |
-| Windows x64 | `Qubik-Launcher-setup-VERSION.exe` | Yes ✔
-| Linux x64 | `Qubik-Launcher-setup-VERSION.AppImage` | No ❌
+| Windows x64 | `QubikLauncher-VERSION-setup.exe` | Yes ✔
+| Linux x64 | `QubikLauncher-VERSION-setup.AppImage` | No ❌
 
 
 ## Console
@@ -97,11 +97,6 @@ The best way to contact the developers is on Discord.
 
 [![discord](https://discordapp.com/api/guilds/759767022916599808/embed.png?style=banner3)][discord]
 
-### Found a bug?
-Join our Bug Report Discord!
-
-[![bugTracker](https://discordapp.com/api/guilds/806242088831811635/embed.png?style=banner3)][bugTracker]
----
 
 ### See you ingame.
 
