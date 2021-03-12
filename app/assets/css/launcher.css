@@ -1388,6 +1388,11 @@ input:checked + .toggleSwitchSlider:before {
     width: 100%;
 }
 
+.settingsAuthAccountMiddle {
+    display: flex;
+    width: 100%;
+}
+
 /* Account details container. */
 .settingsAuthAccountDetails {
     display: flex;
