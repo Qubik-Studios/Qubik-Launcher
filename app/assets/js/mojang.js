@@ -49,12 +49,6 @@ const statuses = [
         essential: false
     },
     {
-        service: 'qubik-studios.net',
-        status: 'wip',
-        name: 'Qubik-Studios.net',
-        essential: false
-    },
-    {
         service: 'account.mojang.com',
         status: 'grey',
         name: 'Mojang Accounts Website',
@@ -80,8 +74,6 @@ exports.statusToHex = function(status){
             return '#eac918'
         case 'red':
             return '#c32625'
-        case 'wip':
-            return '#7F3300'
         case 'grey':
         default:
             return '#848484'
