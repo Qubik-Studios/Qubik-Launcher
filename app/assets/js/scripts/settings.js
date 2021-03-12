@@ -341,7 +341,7 @@ function bindAuthAccountSelect() {
                 }
             }
             val.setAttribute('selected', '')
-            val.innerHTML = 'Active Account &#10004;'
+            val.innerHTML = 'Active Account'
             setSelectedAccount(val.closest('.settingsAuthAccount').getAttribute('uuid'))
         }
     })
@@ -475,22 +475,11 @@ function populateAuthAccounts() {
                         <div class="settingsAuthAccountDetailValue">${acc.uuid}</div>
                     </div>
                 </div>
-                <div class="settingsAuthAccountMiddle">
-                    <div class="settingsAuthAccountDetails">
-                        <div class="settingsAuthAccountDetailPane">
-                            <br>
-                        </div>
-                        <div class="settingsAuthAccountDetailPane">
-                            <div class="settingsAuthAccountDetailTitle">Type</div>
-                            <div class="settingsAuthAccountDetailValue">${acc.type === 'microsoft' ? '<img src="https://docs.microsoft.com/de-de/azure/active-directory/develop/media/howto-add-branding-in-azure-ad-apps/ms-symbollockup_mssymbol_19.png" alt="Microsoft" style="height: 21px; width: auto; padding-top: 2px;" align="middle">' : '<img src="https://www.minecraft.net/content/dam/franchise/logos/Mojang-Studios-Logo-Redbox.jpg" alt="Mojang" style="height: 21px; width: auto; padding-top: 2px;" align="middle">'}</div>
-                        </div>
-                        <div class="settingsAuthAccountDetailPane">
-                            <br>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="settingsAuthAccountActions">
-                    <button class="settingsAuthAccountSelect" ${selectedUUID === acc.uuid ? 'selected>Active Account &#10004;' : '>Select Account'}</button>
+                    <button class="settingsAuthAccountSelect" ${selectedUUID === acc.uuid ? 'selected>Active Account' : '>Select Account'}</button>
+                    <div class="settingsAuthAccountDetailTitle">Account type</div>
+                    <div class="settingsAuthAccountDetailValue">${acc.type === 'microsoft' ? '<img src="https://docs.microsoft.com/de-de/azure/active-directory/develop/media/howto-add-branding-in-azure-ad-apps/ms-symbollockup_mssymbol_19.png" alt="MSN" style="height: 21px; width: auto; margin-top: 4px;" align="middle">' : '<img src="https://www.minecraft.net/content/dam/franchise/logos/Mojang-Studios-Logo-Redbox.jpg" alt="MJ" style="height: 21px; width: auto; margin-top: 4px;" align="middle">'}</div>
                     <div class="settingsAuthAccountWrapper">
                         <button class="settingsAuthAccountLogOut">Log Out</button>
                     </div>

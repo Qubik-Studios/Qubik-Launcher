@@ -1373,7 +1373,6 @@ input:checked + .toggleSwitchSlider:before {
 .settingsAuthAccountLeft {
     padding: 5px 20px 5px 20px;
     border-right: 1px solid rgba(126, 126, 126, 0.57);
-    background-color: rgba(0, 0, 0, 0.25);
     border-radius: 15px 0px 0px 15px;
 }
 
@@ -1426,14 +1425,19 @@ input:checked + .toggleSwitchSlider:before {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding: 10px;
+    border-left: 1px solid rgba(126, 126, 126, 0.57);
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-radius: 0px 15px 15px 0px;
 }
 
 /* Account select button shared styles. */
 .settingsAuthAccountSelect {
-    opacity: 0;
-    border: none;
+    border: 1px solid white;
+    border-radius: 3px;
     white-space: nowrap;
     background: none;
     font-family: 'Avenir Medium';
@@ -1443,7 +1447,8 @@ input:checked + .toggleSwitchSlider:before {
 }
 .settingsAuthAccountSelect:hover:not([selected]),
 .settingsAuthAccountSelect:focus:not([selected]) {
-    text-shadow: 0px 0px 20px white, 0px 0px 20px white;
+    box-shadow: 0px 0px 10px white;
+    background: rgba(255, 255, 255, 0.25);
     cursor: pointer;
 }
 .settingsAuthAccount:hover .settingsAuthAccountSelect:not([selected]),
@@ -1451,12 +1456,13 @@ input:checked + .toggleSwitchSlider:before {
     opacity: 1;
 }
 .settingsAuthAccountSelect[selected] {
+    border: 1px solid #23aa23;
+    border-radius: 3px;
     pointer-events: none;
 }
 
 /* Account logout button shared styles. */
 .settingsAuthAccountLogOut {
-    opacity: 0;
     border: 1px solid rgb(241, 55, 55);
     color: rgb(241, 55, 55);
     background: none;

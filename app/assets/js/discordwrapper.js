@@ -21,7 +21,7 @@ rpc.on('ready', () => {
         startTimestamp: new Date(),
         largeImageKey: 'qubik_client_logo',
         largeImageText: 'Qubik Launcher',
-        smallImageKey: 'beta',
+        smallImageKey: 'alpha',
         smallImageText: 'v0.1.1-Beta.0'
     })
 
