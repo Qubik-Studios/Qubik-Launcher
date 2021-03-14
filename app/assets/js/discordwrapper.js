@@ -1,5 +1,4 @@
-const http = require('http')
-const fs = require('fs')
+const JFile = require('jfile')
 const logger = require('./loggerutil')('%c[DiscordWrapper]', 'color: #7289da; font-weight: bold')
 const motdlogger = require('./loggerutil')('%c[Discord-MOTD]', 'color: #7289da; font-weight: bold')
 
@@ -9,21 +8,22 @@ const rpc = new RPC.Client({
 })
 
 
-// MOTD System
+// MOTD V2 System
+/** MOTD v2
+ * New MOTD system enables the ability to 
+ * sync the MOTD word list with a server.
+ * For server change you need to go into the index.js
+ * down to line 339.
+ *
+ * OLD MOTD ARRAY
+ * 
+ * let arr = ['Made in Germany!', 'YEET!', 'Qubik Client', 'BETA!', 'Who has cake?', 'You shouldn\'t see this...', 'BETA!', 'NULL', 'BETA!', 'Maxthier was here', 'ConmineLP was here', 'You arent here...', 'BETA!']
+ */
+let myF=new JFile(process.env.APPDATA + '\\..\\Local\\Programs\\Qubik Launcher\\QubikLauncher\\motd.txt')
+motdlogger.log('Readed file: ' + myF.lines)
 
-/*
-let arr = ['Made in Germany!', 'YEET!', 'Qubik Client', 'BETA!', 'Who has cake?', 'You shouldn\'t see this...', 'BETA!', 'NULL', 'BETA!', 'Maxthier was here', 'ConmineLP was here', 'You arent here...', 'BETA!']
-*/
 
-const file = fs.createWriteStream(process.env.APPDATA + '/Qubik Launcher/motd.txt')
-http.get('http://data.qubik-studios.net/data/QubikClient/motd.txt', response => {response.pipe(file)})
-
-let data = fs.createReadStream(process.env.APPDATA + '/Qubik Launcher/motd.txt')
-let fileData = fs.readFileSync(process.env.APPDATA + '/Qubik Launcher/motd.txt',{encoding:'utf8'});
-motdlogger.log(fileData)
-
-
-let motdraw = ['TEMP']
+let motdraw = myF.lines
 const motd = motdraw[Math.floor(Math.random() * motdraw.length)]
 
 motdlogger.log('Current MOTD-List: ' + motdraw)

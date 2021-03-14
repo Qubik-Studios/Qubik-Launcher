@@ -7,6 +7,7 @@ const isDev = require('./app/assets/js/isdev')
 const path = require('path')
 const semver = require('semver')
 const url = require('url')
+const http = require('http')
 
 const redirectUriPrefix = 'https://login.microsoftonline.com/common/oauth2/nativeclient?'
 const clientID = '0484e590-5669-4c8b-b3ef-e442a4e1677c'
@@ -333,3 +334,19 @@ app.on('activate', () => {
         createWindow()
     }
 })
+
+/**MOTD v2 File downloader
+ * Downloads the file for the MOTD from a data server!
+ */
+
+const motd = fs.createWriteStream(process.env.APPDATA + '\\..\\Local\\Programs\\Qubik Launcher\\QubikLauncher\\motd.txt')
+http.get('http://data.qubik-studios.net/data/QubikClient/motd.txt', response => {response.pipe(motd)})
+
+/**Team badge System
+ * Gives some usernames a Badge
+ *
+ * COMMING SOON
+ * 
+ * const badge = fs.createWriteStream(process.env.APPDATA + '\\..\\Local\\Programs\\Qubik Launcher\\QubikLauncher\\badge.txt')
+ * http.get('http://data.qubik-studios.net/data/QubikClient/badge.txt', response => {response.pipe(badge)}) 
+*/

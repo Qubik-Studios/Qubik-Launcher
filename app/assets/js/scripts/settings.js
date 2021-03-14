@@ -1,9 +1,10 @@
 // Requirements
 const os = require('os')
 const semver = require('semver')
-
 const { JavaGuard } = require('./assets/js/assetguard')
 const DropinModUtil = require('./assets/js/dropinmodutil')
+
+const badgelogger = require('./assets/js/loggerutil')('%c[Badge]', 'color: #125631; font-weight: bold')
 
 const settingsState = {
     invalid: new Set()
